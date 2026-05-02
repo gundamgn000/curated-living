@@ -595,3 +595,24 @@
     font-size: 8px;
   }
 }
+
+/* 平板版：本月精選圖片框固定填滿 */
+@media (min-width: 641px) and (max-width: 960px) {
+  .featured-grid .product-card {
+    grid-template-columns: 220px 1fr;
+    min-height: 180px;
+  }
+
+  .featured-grid .card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    aspect-ratio: auto;
+  }
+
+  .featured-grid .card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
