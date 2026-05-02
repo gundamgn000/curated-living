@@ -46,7 +46,10 @@
       </div>
     </div>
 
-    <div class="mobile-drawer" id="mobileDrawer">
+    
+  </header>
+
+  <div class="mobile-drawer" id="mobileDrawer">
       <div class="mobile-drawer-inner">
         <a href="../index/index.html" class="drawer-link active">首頁</a>
         <a href="../about/about.html" class="drawer-link">品牌故事</a>
@@ -70,7 +73,6 @@
         </div>
       </div>
     </div>
-  </header>
 
   <!-- HERO -->
   <section class="hero-section">
@@ -264,16 +266,27 @@
     const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
     const drawerSubmenu = document.getElementById('drawerSubmenu');
 
-    menuToggle.addEventListener('click', () => {
-      menuToggle.classList.toggle('active');
-      mobileDrawer.classList.toggle('active');
-      menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
-    });
+    // ✅ 漢堡選單（一定要有才綁）
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        mobileDrawer.classList.toggle('active');
+        menuToggle.setAttribute(
+          'aria-expanded',
+          menuToggle.classList.contains('active')
+        );
+      });
+    }
 
-    drawerDropdownToggle.addEventListener('click', () => {
-      drawerDropdownToggle.classList.toggle('active');
-      drawerSubmenu.classList.toggle('active');
-    });
+    // ✅ 子選單（有才綁）
+    if (drawerDropdownToggle && drawerSubmenu) {
+      drawerDropdownToggle.addEventListener('click', () => {
+        drawerDropdownToggle.classList.toggle('active');
+        drawerSubmenu.classList.toggle('active');
+      });
+    }
+
+    
   </script>
 </body>
 </html>

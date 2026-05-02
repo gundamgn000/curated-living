@@ -38,7 +38,10 @@
         <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
       </div>
     </div>
-    <div class="mobile-drawer" id="mobileDrawer">
+    
+  </header>
+
+  <div class="mobile-drawer" id="mobileDrawer">
       <div class="mobile-drawer-inner">
         <a href="../index/index.html" class="drawer-link">首頁</a>
         <a href="../about/about.html" class="drawer-link">品牌故事</a>
@@ -60,7 +63,6 @@
         </div>
       </div>
     </div>
-  </header>
 
   <main class="product-list-page">
 
@@ -272,7 +274,7 @@
 
       productCards.forEach(card => {
         const show = cur === 'all' || card.dataset.category === cur;
-        
+
         card.classList.toggle('is-hidden', !show);
         card.style.removeProperty('display');
 
