@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="手沖濾杯組 — 陶瓷濾杯 + 木托底座，晨間咖啡的完整儀式。">
+  <title>手沖濾杯組 — Curated Living</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">Logo</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="../index/index.html">首頁</a>
+        <a href="../about/about.html">品牌故事</a>
+        <div class="nav-dropdown">
+          <!-- ✅ 修正：商品詳情頁 nav active 改到「選品」 -->
+          <a href="../Product/product.html" class="nav-dropdown-trigger active">選品</a>
+          <div class="nav-dropdown-menu">
+            <a href="../Product/product.html">所有選品</a>
+            <a href="../Product/product.html?category=kitchen">廚房日常</a>
+            <a href="../Product/product.html?category=stationery">文房雜貨</a>
+            <a href="../Product/product.html?category=bath">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer">聯絡我們</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-inner">
+        <a href="../index/index.html" class="drawer-link">首頁</a>
+        <a href="../about/about.html" class="drawer-link">品牌故事</a>
+        <div class="drawer-dropdown">
+          <button class="drawer-dropdown-toggle active" id="drawerDropdownToggle" type="button">
+            選品分類 <span class="drawer-arrow">⌄</span>
+          </button>
+          <div class="drawer-submenu active" id="drawerSubmenu">
+            <a href="../Product/product.html" class="drawer-sublink">所有選品</a>
+            <a href="../Product/product.html?category=kitchen" class="drawer-sublink">廚房日常</a>
+            <a href="../Product/product.html?category=stationery" class="drawer-sublink">文房雜貨</a>
+            <a href="../Product/product.html?category=bath" class="drawer-sublink">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor" class="drawer-sublink">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer" class="drawer-link">聯絡我們</a>
+        <div class="mobile-drawer-icons">
+          <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="product-wrapper">
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="手沖濾杯組主圖" id="mainImg">
+        </div>
+        <div class="thumbnail-list">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=200&q=80" alt="縮圖 1" class="thumbnail active" data-src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=200&q=80" alt="縮圖 2" class="thumbnail" data-src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=200&q=80" alt="縮圖 3" class="thumbnail" data-src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&w=800&q=80">
+        </div>
+      </div>
+
+      <div class="product-info">
+        <span class="kicker">KITCHEN / CL-2024-DRP01</span>
+        <h1 class="product-title">手沖濾杯組</h1>
+        <div class="product-price">NT$ 1,280</div>
+
+        <div class="product-description">
+          <p>陶瓷濾杯搭配天然木托底座，從倒水到等待，都是一段安靜的晨間儀式。</p>
+          <p>手工製作的陶瓷表面帶有細微紋理，每一只略有不同，都是獨一無二的。</p>
+        </div>
+
+        <ul class="product-specs">
+          <li data-label="MATERIAL">陶瓷杯身 / 橡木底座</li>
+          <li data-label="SIZE">適用 1–2 人份</li>
+          <li data-label="FILTER">101 濾紙（市售通用）</li>
+          <li data-label="ORIGIN">台灣陶藝工坊製</li>
+          <li data-label="SHIP">付款後 3-5 個工作天</li>
+        </ul>
+
+        <div class="quantity-selector">
+          <button class="qty-btn" id="qtyMinus">−</button>
+          <span class="qty-number" id="qtyNum">1</span>
+          <button class="qty-btn" id="qtyPlus">+</button>
+        </div>
+
+        <button class="add-to-cart-btn">加入購物車</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- 推薦商品 -->
+  <section class="recommend-section">
+    <h2 class="recommend-title">你可能也喜歡</h2>
+    <div class="recommend-carousel">
+      <button class="carousel-btn carousel-btn-prev" aria-label="上一個">‹</button>
+      <div class="recommend-slider" id="recommendSlider">
+        <div class="recommend-track">
+
+          
+
+          <a href="product-detail.html" class="list-product-card">
+            <div class="list-product-image">
+              <img src="https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=400&q=80" alt="牛皮手帳本">
+            </div>
+
+            <div class="list-product-body">
+              <span class="list-product-tag">STATIONERY</span>
+              <h3>牛皮手帳本</h3>
+              <p>植鞣牛皮封面，越用越有光澤</p>
+
+              <div class="list-product-footer">
+                <span class="list-product-price">NT$ 1,580</span>
+                <span class="list-product-link">View</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="list-product-card">
+            <div class="list-product-image">
+              <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=400&q=80" alt="植物系護手霜">
+            </div>
+
+            <div class="list-product-body">
+              <span class="list-product-tag">BATH</span>
+              <h3>植物系護手霜</h3>
+              <p>草本配方，吸收快不黏膩</p>
+              <div class="list-product-footer">
+                <span class="list-product-price">NT$ 680</span>
+                <span class="list-product-link">View</span>
+              </div>
+            </div>
+          </a>
+
+           <a href="product-detail.html" class="list-product-card">
+            <div class="list-product-image">
+              <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=400&q=80" alt="輕量野餐墊">
+            </div>
+
+            <div class="list-product-body">
+              <span class="list-product-tag">STATIONERY</span>
+              <h3>輕量野餐墊</h3>
+              <p>防潑水可機洗，折疊攜帶輕巧</p>
+              <div class="list-product-footer">
+                <span class="list-product-price">NT$ 980</span>
+                <span class="list-product-link">View</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="product-detail.html" class="list-product-card">
+            <div class="list-product-image">
+              <img src="https://m.media-amazon.com/images/I/61V2Cu5uQwL.jpg" alt="黃銅書籤三件組">
+            </div>
+
+            <div class="list-product-body">
+              <span class="list-product-tag">OUTDOOR</span>
+              <h3>黃銅書籤三件組</h3>
+              <p class="card-subtitle">實心黃銅，放進書頁的小重量感</p>
+              <div class="list-product-footer">
+                <span class="list-product-price">NT$ 780</span>
+                <span class="list-product-link">View</span>
+              </div>
+            </div>
+          </a>
+
+
+          <a href="product-detail.html" class="list-product-card">
+            <div class="list-product-image">
+              <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=400&q=80" alt="有機棉浴巾">
+            </div>
+            <div class="list-product-body">
+              <span class="list-product-tag">BATH & BODY</span>
+              <h3>有機棉浴巾</h3>
+              <p class="card-subtitle">GOTS 認證，越洗越蓬鬆</p>
+              <div class="list-product-footer">
+                <span class="list-product-price">NT$ 1,280</span>
+                <span class="list-product-link">View</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="下一個">›</button>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer-main">
+    <div class="footer-top-container">
+      <div class="footer-logo-box"><div class="footer-logo-square">Logo</div></div>
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h4>Curated Living</h4>
+          <p>為日常挑一點點不一樣，選出讓生活更有質感的好物。</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index/index.html">首頁</a></li>
+            <!-- ✅ 修正：關於我們連結指向 about.html -->
+            <li><a href="../about/about.html">品牌故事</a></li>
+            <li><a href="../Product/product.html">所有選品</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Service</h4>
+          <p>service@curated.com</p>
+          <p>02-1234-5678</p>
+          <p>週一至週五 09:00 - 18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Curated Living. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // ── Header ──
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
+    const drawerSubmenu = document.getElementById('drawerSubmenu');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+    });
+
+    drawerDropdownToggle.addEventListener('click', () => {
+      drawerDropdownToggle.classList.toggle('active');
+      drawerSubmenu.classList.toggle('active');
+    });
+
+    // ── 縮圖切換（用 data-src 避免畫質損失）──
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImg    = document.getElementById('mainImg');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        mainImg.src = thumb.dataset.src;
+        thumbnails.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+
+    // ── 數量選擇 ──
+    let qty = 1;
+    const qtyNum = document.getElementById('qtyNum');
+    document.getElementById('qtyMinus').addEventListener('click', () => {
+      if (qty > 1) { qty--; qtyNum.textContent = qty; }
+    });
+    document.getElementById('qtyPlus').addEventListener('click', () => {
+      qty++; qtyNum.textContent = qty;
+    });
+
+    // ── 推薦輪播（RWD 感知版） ──
+    const slider  = document.getElementById('recommendSlider');
+    const track   = slider.querySelector('.recommend-track');
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    const cards   = track.querySelectorAll('.list-product-card');
+    let currentIndex = 0;
+
+    function getPerView() {
+      return window.innerWidth <= 560 ? 1 : window.innerWidth <= 960 ? 2 : 3;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, cards.length - getPerView());
+    }
+
+    function updateCarousel() {
+      if (!cards.length) return;
+      const gap    = 16;
+      const width  = cards[0].offsetWidth;
+      track.style.transform = `translateX(-${currentIndex * (width + gap)}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < getMaxIndex()) { currentIndex++; updateCarousel(); }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) { currentIndex--; updateCarousel(); }
+    });
+
+    window.addEventListener('resize', () => {
+      currentIndex = Math.min(currentIndex, getMaxIndex());
+      updateCarousel();
+    });
+  </script>
+</body>
+</html>

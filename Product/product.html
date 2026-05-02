@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated Living 全系列選品 — 廚房日常、文房雜貨、浴室時光、戶外旅行。">
+  <title>所有選品 — Curated Living</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">Logo</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="../index/index.html">首頁</a>
+        <a href="../about/about.html">品牌故事</a>
+        <div class="nav-dropdown">
+          <a href="../Product/product.html" class="nav-dropdown-trigger active">選品</a>
+          <div class="nav-dropdown-menu">
+            <a href="../Product/product.html">所有選品</a>
+            <a href="../Product/product.html?category=kitchen">廚房日常</a>
+            <a href="../Product/product.html?category=stationery">文房雜貨</a>
+            <a href="../Product/product.html?category=bath">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer">聯絡我們</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-inner">
+        <a href="../index/index.html" class="drawer-link">首頁</a>
+        <a href="../about/about.html" class="drawer-link">品牌故事</a>
+        <div class="drawer-dropdown">
+          <button class="drawer-dropdown-toggle active" id="drawerDropdownToggle" type="button">
+            選品分類 <span class="drawer-arrow">⌄</span>
+          </button>
+          <div class="drawer-submenu active" id="drawerSubmenu">
+            <a href="../Product/product.html" class="drawer-sublink">所有選品</a>
+            <a href="../Product/product.html?category=kitchen" class="drawer-sublink">廚房日常</a>
+            <a href="../Product/product.html?category=stationery" class="drawer-sublink">文房雜貨</a>
+            <a href="../Product/product.html?category=bath" class="drawer-sublink">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor" class="drawer-sublink">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer" class="drawer-link">聯絡我們</a>
+        <div class="mobile-drawer-icons">
+          <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="product-list-page">
+
+    <section class="product-list-hero">
+      <div class="product-list-hero-content">
+        <span class="product-list-kicker">ALL ITEMS / 200+ CURATED</span>
+        <h1>每一件，<br>都是認真挑過的。</h1>
+        <p>從廚房到戶外，從書桌到浴室，我們為你的日常每一個角落找到合適的好物。</p>
+      </div>
+    </section>
+
+    <section class="product-list-toolbar">
+      <div class="product-list-categories">
+        <button class="category-chip active" type="button" data-category="all">全部</button>
+        <button class="category-chip" type="button" data-category="kitchen">廚房日常</button>
+        <button class="category-chip" type="button" data-category="stationery">文房雜貨</button>
+        <button class="category-chip" type="button" data-category="bath">浴室時光</button>
+        <button class="category-chip" type="button" data-category="outdoor">戶外旅行</button>
+      </div>
+      <div class="product-list-meta"><span>共 8 項選品</span></div>
+    </section>
+
+    <section class="product-list-section">
+      <div class="product-list-grid">
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="kitchen">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="手沖濾杯組">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">KITCHEN</span>
+            <h3>手沖濾杯組</h3>
+            <p>陶瓷濾杯 + 木托底座，晨間咖啡的完整儀式。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 1,280</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="stationery">
+          <div class="list-product-image">
+            <img src="https://live.staticflickr.com/65535/50829593358_157783e642_b.jpg" alt="牛皮手帳本">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">STATIONERY</span>
+            <h3>牛皮手帳本</h3>
+            <p>植鞣牛皮封面，越用越有光澤，陪你記錄每一個日常。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 1,580</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="bath">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="植物系護手霜">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">BATH</span>
+            <h3>植物系護手霜</h3>
+            <p>草本配方，吸收快不黏膩，隨身攜帶的日常照護。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 680</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="outdoor">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=600&q=80" alt="輕量野餐墊">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">OUTDOOR</span>
+            <h3>輕量野餐墊</h3>
+            <p>防潑水、可機洗，折疊攜帶輕巧，隨時出發。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 980</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="kitchen">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="木質料理工具組">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">KITCHEN</span>
+            <h3>木質料理工具組</h3>
+            <p>橡木三件組，無塗裝天然材質，安心使用每一天。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 1,080</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="stationery">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=600&q=80" alt="黃銅書籤三件組">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">STATIONERY</span>
+            <h3>黃銅書籤三件組</h3>
+            <p>實心黃銅，鑄造細節，放進書頁時的小小重量感。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 780</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="bath">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?auto=format&fit=crop&w=600&q=80" alt="有機棉浴巾">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">BATH</span>
+            <h3>有機棉浴巾</h3>
+            <p>GOTS 認證有機棉，越洗越蓬鬆，對肌膚與環境都友善。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 1,280</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="../product-detail/product-detail.html" class="list-product-card" data-category="outdoor">
+          <div class="list-product-image">
+            <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=600&q=80" alt="琺瑯野餐杯組">
+          </div>
+          <div class="list-product-body">
+            <span class="list-product-tag">OUTDOOR</span>
+            <h3>琺瑯野餐杯組</h3>
+            <p>兩入組，耐高溫、耐磨，戶外喝水也有質感。</p>
+            <div class="list-product-footer">
+              <span class="list-product-price">NT$ 1,180</span>
+              <span class="list-product-link">View →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer-main">
+    <div class="footer-top-container">
+      <div class="footer-logo-box"><div class="footer-logo-square">Logo</div></div>
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h4>Curated Living</h4>
+          <p>為日常挑一點點不一樣，選出讓生活更有質感的好物。</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index/index.html">首頁</a></li>
+            <li><a href="../about/about.html">品牌故事</a></li>
+            <li><a href="../Product/product.html">所有選品</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Service</h4>
+          <p>service@curated.com</p>
+          <p>02-1234-5678</p>
+          <p>週一至週五 09:00 - 18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Curated Living. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
+    const drawerSubmenu = document.getElementById('drawerSubmenu');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+    });
+
+    drawerDropdownToggle.addEventListener('click', () => {
+      drawerDropdownToggle.classList.toggle('active');
+      drawerSubmenu.classList.toggle('active');
+    });
+
+    const categoryButtons = document.querySelectorAll('.category-chip');
+    const productCards     = document.querySelectorAll('.list-product-card');
+    const productCount     = document.querySelector('.product-list-meta span');
+
+    function filterProducts(category, updateUrl = true) {
+      const cur = category && category.trim() ? category : 'all';
+      let count = 0;
+
+      productCards.forEach(card => {
+        const show = cur === 'all' || card.dataset.category === cur;
+        
+        card.classList.toggle('is-hidden', !show);
+        card.style.removeProperty('display');
+
+        if (show) count++;
+      });
+
+      if (productCount) productCount.textContent = `共 ${count} 項選品`;
+
+      categoryButtons.forEach(btn =>
+        btn.classList.toggle('active', btn.dataset.category === cur)
+      );
+
+      if (updateUrl) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('category', cur);
+        window.history.replaceState({}, '', url);
+      }
+    }
+
+    categoryButtons.forEach(btn =>
+      btn.addEventListener('click', () => filterProducts(btn.dataset.category))
+    );
+
+    const init = new URLSearchParams(window.location.search).get('category') || 'all';
+    filterProducts(init, false);
+  </script>
+</body>
+</html>

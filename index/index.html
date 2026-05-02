@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated Living — 為日常，挑一點點不一樣。從廚房到書桌，選品質感生活小物。">
+  <meta property="og:title" content="Curated Living — 為日常選品">
+  <meta property="og:description" content="從晨間咖啡到睡前儀式，我們挑出讓生活更有層次的小物。">
+  <title>Curated Living — 為日常選品</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">Logo</div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu">
+        <a href="../index/index.html" class="active">首頁</a>
+        <a href="../about/about.html">品牌故事</a>
+        <div class="nav-dropdown">
+          <a href="../Product/product.html" class="nav-dropdown-trigger">選品</a>
+          <div class="nav-dropdown-menu">
+            <a href="../Product/product.html">所有選品</a>
+            <a href="../Product/product.html?category=kitchen">廚房日常</a>
+            <a href="../Product/product.html?category=stationery">文房雜貨</a>
+            <a href="../Product/product.html?category=bath">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer">聯絡我們</a>
+      </nav>
+
+      <div class="nav-icons">
+        <a href="#">搜尋</a>
+        <a href="#">會員</a>
+        <a href="#">購物車 (0)</a>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-inner">
+        <a href="../index/index.html" class="drawer-link active">首頁</a>
+        <a href="../about/about.html" class="drawer-link">品牌故事</a>
+        <div class="drawer-dropdown">
+          <button class="drawer-dropdown-toggle" id="drawerDropdownToggle" type="button">
+            選品分類 <span class="drawer-arrow">⌄</span>
+          </button>
+          <div class="drawer-submenu" id="drawerSubmenu">
+            <a href="../Product/product.html" class="drawer-sublink">所有選品</a>
+            <a href="../Product/product.html?category=kitchen" class="drawer-sublink">廚房日常</a>
+            <a href="../Product/product.html?category=stationery" class="drawer-sublink">文房雜貨</a>
+            <a href="../Product/product.html?category=bath" class="drawer-sublink">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor" class="drawer-sublink">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer" class="drawer-link">聯絡我們</a>
+        <div class="mobile-drawer-icons">
+          <a href="#">搜尋</a>
+          <a href="#">會員</a>
+          <a href="#">購物車 (0)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="kicker">VOL.05 / CURATED LIVING</span>
+        <h1>為日常，<br>挑一點點<br><span class="accent">不一樣。</span></h1>
+        <p>從晨間咖啡到睡前儀式，從廚房到書桌，我們挑出讓生活更有層次的好物。</p>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <strong>200+</strong>
+            <span>精選品項</span>
+          </div>
+          <div class="hero-meta-item">
+            <strong>4</strong>
+            <span>生活主題</span>
+          </div>
+          <div class="hero-meta-item">
+            <strong>每月</strong>
+            <span>新品更新</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="../Product/product.html" class="btn btn-accent">逛逛選品 →</a>
+          <a href="../about/about.html" class="btn btn-outline">關於我們</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="生活選品情境">
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <div class="manifesto-container">
+      <span class="kicker">WHY WE CURATE</span>
+      <h2>不只是賣東西，<br>是挑日常。</h2>
+      <p>我們相信，好的生活來自一點點對細節的講究。不需要多昂貴，但要有自己的態度。<br>
+         每一件商品都是親自挑過、用過、想推薦的。因為你信任我們，我們對得起這份信任。</p>
+    </div>
+  </section>
+
+  <!-- 本月主題 4 格 -->
+  
+
+  <!-- 本月精選 -->
+  <section class="featured-section">
+    <div class="section-title">
+      <h2>本月精選</h2>
+      <p>FEATURED / VOL.05</p>
+    </div>
+    <div class="featured-grid">
+      <a href="../product-detail/product-detail.html" class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80" alt="手沖濾杯組">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">KITCHEN / 01</span>
+          <h3>手沖濾杯組</h3>
+          <p>陶瓷濾杯 + 木托底座，晨間咖啡的完整儀式。</p>
+          <div class="card-footer">
+            <span class="price">NT$ 1,280</span>
+            <span class="view-link">View →</span>
+          </div>
+        </div>
+      </a>
+      <a href="../product-detail/product-detail.html" class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80" alt="植物系護手霜">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">BATH / 03</span>
+          <h3>植物系護手霜</h3>
+          <p>草本配方，吸收快不黏膩，隨身攜帶的日常照護。</p>
+          <div class="card-footer">
+            <span class="price">NT$ 680</span>
+            <span class="view-link">View →</span>
+          </div>
+        </div>
+      </a>
+      <a href="../product-detail/product-detail.html" class="product-card">
+        <div class="card-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?auto=format&fit=crop&w=600&q=80" alt="牛皮手帳本">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">STATIONERY / 02</span>
+          <h3>牛皮手帳本</h3>
+          <p>植鞣牛皮封面，越用越有光澤，陪你記錄每一個日常。</p>
+          <div class="card-footer">
+            <span class="price">NT$ 1,580</span>
+            <span class="view-link">View →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 商品分類 -->
+  <section class="themes-strip">
+    <div class="section-title">
+      <h2>選品分類</h2>
+    </div>
+    <div class="themes-grid">
+      <a href="../Product/product.html?category=kitchen" class="theme-item">
+        <div class="theme-img">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="廚房日常">
+        </div>
+        <div class="theme-body">
+          <span class="theme-num">01 KITCHEN</span>
+          <h3>廚房日常</h3>
+          <p>從一只早晨的咖啡杯開始</p>
+        </div>
+      </a>
+      <a href="../Product/product.html?category=stationery" class="theme-item">
+        <div class="theme-img">
+          <img src="https://cdn.tatlerasia.com/asiatatler/i/tw/2018/11/05144515-004_cover_1320x746.jpg" alt="文房雜貨">
+        </div>
+        <div class="theme-body">
+          <span class="theme-num">02 STATIONERY</span>
+          <h3>文房雜貨</h3>
+          <p>寫字的儀式感，從一支好筆開始</p>
+        </div>
+      </a>
+      <a href="../Product/product.html?category=bath" class="theme-item">
+        <div class="theme-img">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=600&q=80" alt="浴室時光">
+        </div>
+        <div class="theme-body">
+          <span class="theme-num">03 BATH</span>
+          <h3>浴室時光</h3>
+          <p>把日常清潔變成一場小旅行</p>
+        </div>
+      </a>
+      <a href="../Product/product.html?category=outdoor" class="theme-item">
+        <div class="theme-img">
+          <img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?auto=format&fit=crop&w=600&q=80" alt="戶外旅行">
+        </div>
+        <div class="theme-body">
+          <span class="theme-num">04 OUTDOOR</span>
+          <h3>戶外旅行</h3>
+          <p>把家的氣息帶出門</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer id="footer" class="footer-main">
+    <div class="footer-top-container">
+      <div class="footer-logo-box">
+        <div class="footer-logo-square">Logo</div>
+      </div>
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h4>Curated Living</h4>
+          <p>為日常挑一點點不一樣，從廚房到書桌，選出讓生活更有質感的好物。</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index/index.html">首頁</a></li>
+            <li><a href="../about/about.html">品牌故事</a></li>
+            <li><a href="../Product/product.html">所有選品</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Service</h4>
+          <p>service@curated.com</p>
+          <p>02-1234-5678</p>
+          <p>週一至週五 09:00 - 18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Curated Living. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
+    const drawerSubmenu = document.getElementById('drawerSubmenu');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+    });
+
+    drawerDropdownToggle.addEventListener('click', () => {
+      drawerDropdownToggle.classList.toggle('active');
+      drawerSubmenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

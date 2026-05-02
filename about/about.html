@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curated Living 品牌故事 — 我們為什麼挑選，挑什麼，以及我們相信的那種生活方式。">
+  <title>品牌故事 — Curated Living</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">Logo</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="開啟選單" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu">
+        <a href="../index/index.html">首頁</a>
+        <a href="../about/about.html" class="active">品牌故事</a>
+        <div class="nav-dropdown">
+          <a href="../Product/product.html" class="nav-dropdown-trigger">選品</a>
+          <div class="nav-dropdown-menu">
+            <a href="../Product/product.html">所有選品</a>
+            <a href="../Product/product.html?category=kitchen">廚房日常</a>
+            <a href="../Product/product.html?category=stationery">文房雜貨</a>
+            <a href="../Product/product.html?category=bath">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer">聯絡我們</a>
+      </nav>
+      <div class="nav-icons">
+        <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+      </div>
+    </div>
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-inner">
+        <a href="../index/index.html" class="drawer-link">首頁</a>
+        <a href="../about/about.html" class="drawer-link active">品牌故事</a>
+        <div class="drawer-dropdown">
+          <button class="drawer-dropdown-toggle" id="drawerDropdownToggle" type="button">
+            選品分類 <span class="drawer-arrow">⌄</span>
+          </button>
+          <div class="drawer-submenu" id="drawerSubmenu">
+            <a href="../Product/product.html" class="drawer-sublink">所有選品</a>
+            <a href="../Product/product.html?category=kitchen" class="drawer-sublink">廚房日常</a>
+            <a href="../Product/product.html?category=stationery" class="drawer-sublink">文房雜貨</a>
+            <a href="../Product/product.html?category=bath" class="drawer-sublink">浴室時光</a>
+            <a href="../Product/product.html?category=outdoor" class="drawer-sublink">戶外旅行</a>
+          </div>
+        </div>
+        <a href="#footer" class="drawer-link">聯絡我們</a>
+        <div class="mobile-drawer-icons">
+          <a href="#">搜尋</a><a href="#">會員</a><a href="#">購物車 (0)</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="about-page">
+
+    <!-- About Hero -->
+    <section class="about-hero">
+      <div class="about-hero-container">
+        <div class="about-hero-image">
+          <img src="https://www.foodnext.net/dispPageBox/getFile/GetImg.aspx?FileLocation=%2FPJ-FOODNEXT%2FFiles%2F&FileName=photo-61304-i.JPG" alt="選品工作台">
+        </div>
+        <div class="about-hero-text">
+          <span class="kicker">OUR STORY</span>
+          <h1>挑，是一種<br>生活態度。</h1>
+          <p>Curated Living 成立於 2024 年，源自一個簡單的信念——生活中的每一件小物，都值得被認真挑選。我們不追求最多、最全，而是每一件都親自用過、認為值得推薦，才會放上架。</p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">2024</span>
+              <span class="stat-label">Founded</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">Curated items</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">4</span>
+              <span class="stat-label">Life themes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Gallery -->
+    <section class="about-story-section">
+      <div class="about-story-container">
+        <div class="story-header">
+          <h2>選品現場。</h2>
+          <p>BEHIND THE CURATION</p>
+        </div>
+        <div class="story-gallery-grid">
+          <div class="story-gallery-item" data-num="01">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="選品現場 01">
+          </div>
+          <div class="story-gallery-item" data-num="02">
+            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=600&q=80" alt="選品現場 02">
+          </div>
+          <div class="story-gallery-item" data-num="03">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="選品現場 03">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Values -->
+    <section class="brand-values">
+      <div class="section-title">
+        <h2>我們的選品信念</h2>
+        <p>WHY WE CURATE</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <h3>親自用過</h3>
+          <p>每一件商品都是團隊親自試用後才決定推薦，我們不賣我們自己不想用的東西。</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <h3>設計有態度</h3>
+          <p>功能之外，我們在意設計語言——它放在你的空間裡，看起來是不是也舒服。</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <h3>少即是精</h3>
+          <p>不追求品項多，每月精選少量優質商品，讓每一件都值得你花時間認識它。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Row -->
+    <section class="about-detail">
+      <div class="detail-row">
+        <div class="detail-img">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="選品細節">
+        </div>
+        <div class="detail-content">
+          <span class="kicker">CURATION PROCESS</span>
+          <h2>你看不見的那些挑選過程。</h2>
+          <p>一件商品從初步接觸到正式上架，平均要經過 3-6 週的評估。我們會在不同使用情境下測試，也會想像它在不同類型的家裡，是不是同樣合適。</p>
+          <p>我們相信，真正適合日常的東西，不一定是最貴的，但一定是被認真對待過的。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer-main">
+    <div class="footer-top-container">
+      <div class="footer-logo-box"><div class="footer-logo-square">Logo</div></div>
+      <div class="footer-links-grid">
+        <div class="footer-column">
+          <h4>Curated Living</h4>
+          <p>為日常挑一點點不一樣，選出讓生活更有質感的好物。</p>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../index/index.html">首頁</a></li>
+            <li><a href="../about/about.html">品牌故事</a></li>
+            <li><a href="../Product/product.html">所有選品</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Service</h4>
+          <p>service@curated.com</p>
+          <p>02-1234-5678</p>
+          <p>週一至週五 09:00 - 18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Curated Living. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
+    const drawerSubmenu = document.getElementById('drawerSubmenu');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileDrawer.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', menuToggle.classList.contains('active'));
+    });
+
+    drawerDropdownToggle.addEventListener('click', () => {
+      drawerDropdownToggle.classList.toggle('active');
+      drawerSubmenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
