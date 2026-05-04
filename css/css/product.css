@@ -1,27 +1,38 @@
 /* =========================================
    Product List & Detail — Maison Nordic
-   Vol.02 / Soft Blue · White · Serif
+   Luxury Minimal · Black Gold · Serif
    ========================================= */
 
 /* ── List Hero ── */
 .product-list-page { background: var(--bg-page); }
 
 .product-list-hero {
-  background: var(--bg-hero);
-  border-bottom: 0.5px solid var(--border-line);
+  background: var(--color-graphite);
+  border-bottom: 1px solid var(--border-gold);
   padding: var(--space-7) var(--space-5);
   position: relative;
   overflow: hidden;
 }
 
-/* 移除深色格紋裝飾 */
-.product-list-hero::after { display: none; }
+/* 背景格紋 */
+.product-list-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(201,168,76,0.04) 0px,
+      transparent 1px,
+      transparent 72px
+    );
+  pointer-events: none;
+}
 
 .product-list-hero-content {
   max-width: var(--container-max);
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  position: relative; z-index: 1;
 }
 
 .product-list-kicker {
@@ -29,7 +40,7 @@
   font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.22em;
-  color: var(--color-blue);
+  color: var(--color-gold);
   text-transform: uppercase;
   display: block;
   margin-bottom: var(--space-4);
@@ -38,19 +49,20 @@
 .product-list-hero h1 {
   font-family: var(--font-display);
   font-weight: 300;
+  
   font-size: clamp(36px, 5.5vw, 68px);
   letter-spacing: 0.04em;
   line-height: 1.4;
   margin-bottom: var(--space-4);
   max-width: 600px;
-  color: var(--color-navy);
+  color: var(--color-ivory);
 }
 
 .product-list-hero p {
   font-family: var(--font-sans);
   font-size: 15px;
   line-height: 1.9;
-  color: var(--text-secondary);
+  color: rgba(242,239,232,0.45);
   max-width: 480px;
   margin: 0;
 }
@@ -63,10 +75,10 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  border-bottom: 0.5px solid var(--border-line);
+  border-bottom: 1px solid var(--border-line);
   flex-wrap: wrap;
   gap: 0;
-  background: var(--color-white);
+  background: var(--color-ivory);
 }
 
 .product-list-categories {
@@ -89,12 +101,12 @@
   transition: color 0.2s, border-color 0.2s;
 }
 
-.category-chip:hover { color: var(--color-navy); }
+.category-chip:hover { color: var(--text-primary); }
 
 .category-chip.active {
-  color: var(--color-navy);
+  color: var(--color-obsidian);
   font-weight: 500;
-  border-bottom-color: var(--color-blue);
+  border-bottom-color: var(--color-gold);
 }
 
 .product-list-meta {
@@ -119,29 +131,27 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  background: transparent;
-  border: none;
+  background: var(--border-line);
+  border: 1px solid var(--border-line);
 }
 
 /* 橫式：左圖右文 */
 .list-product-card {
-  background: var(--color-white);
+  background: var(--color-ivory);
   display: grid;
   grid-template-columns: 280px 1fr;
   position: relative;
   transition: background 0.25s;
-  border: 0.5px solid var(--border-line);
 }
 
-.list-product-card:hover { background: var(--color-offwhite); }
+.list-product-card:hover { background: var(--bg-surface); }
 
-/* 藍色左邊線，hover 出現 */
 .list-product-card::before {
   content: "";
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 2px;
-  background: var(--color-blue);
+  background: var(--color-gold);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.35s ease;
@@ -152,14 +162,14 @@
 .list-product-image {
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: var(--color-frost);
+  background: var(--color-linen);
 }
 
 .list-product-image img {
   width: 100%; height: 100%;
   object-fit: cover;
   transition: transform 0.7s ease;
-  filter: brightness(0.96);
+  filter: brightness(0.93);
 }
 
 .list-product-card:hover .list-product-image img {
@@ -172,14 +182,14 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--space-5) var(--space-6);
-  border-left: 0.5px solid var(--border-line);
+  border-left: 1px solid var(--border-line);
 }
 
 .list-product-tag {
   font-family: var(--font-sans);
   font-size: 10px;
   letter-spacing: 0.2em;
-  color: var(--color-blue);
+  color: var(--color-gold);
   text-transform: uppercase;
   margin-bottom: var(--space-3);
 }
@@ -187,15 +197,15 @@
 .list-product-body h3 {
   font-family: var(--font-display);
   font-weight: 400;
+  
   font-size: 24px;
   letter-spacing: 0.01em;
   margin-bottom: var(--space-3);
   line-height: 1.4;
-  color: var(--color-navy);
   transition: color 0.2s;
 }
 
-.list-product-card:hover .list-product-body h3 { color: var(--color-blue-dark); }
+.list-product-card:hover .list-product-body h3 { color: var(--color-graphite); }
 
 .list-product-body > p {
   font-family: var(--font-sans);
@@ -212,14 +222,13 @@
   justify-content: space-between;
   align-items: center;
   padding-top: var(--space-3);
-  border-top: 0.5px solid var(--border-line);
+  border-top: 1px solid var(--border-line);
 }
 
 .list-product-price {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 22px;
-  color: var(--color-navy);
 }
 
 .list-product-link {
@@ -238,7 +247,7 @@
 .list-product-link::after { content: "→"; font-size: 14px; }
 
 .list-product-card:hover .list-product-link {
-  color: var(--color-blue);
+  color: var(--color-gold);
   gap: 12px;
 }
 
@@ -266,22 +275,22 @@
 .main-image {
   aspect-ratio: 1;
   overflow: hidden;
-  background: var(--color-frost);
-  border: 0.5px solid var(--border-line);
+  background: var(--color-linen);
+  border: 1px solid var(--border-line);
   position: relative;
 }
 
 .main-image img { width: 100%; height: 100%; object-fit: cover; }
 
-/* 角落藍色裝飾 */
+/* 角落金色裝飾 */
 .main-image::before,
 .main-image::after {
   content: "";
   position: absolute;
   width: 24px; height: 24px;
-  border-color: var(--color-blue);
+  border-color: var(--color-gold);
   border-style: solid;
-  opacity: 0.45;
+  opacity: 0.6;
 }
 
 .main-image::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
@@ -297,14 +306,14 @@
   aspect-ratio: 1;
   object-fit: cover;
   cursor: pointer;
-  background: var(--color-frost);
-  opacity: 0.5;
+  background: var(--color-linen);
+  opacity: 0.45;
   transition: opacity 0.2s;
   border: 1px solid transparent;
 }
 
-.thumbnail:hover  { opacity: 0.8; }
-.thumbnail.active { opacity: 1; border-color: var(--color-blue); }
+.thumbnail:hover  { opacity: 0.75; }
+.thumbnail.active { opacity: 1; border-color: var(--color-gold); }
 
 /* 右側資訊 */
 .product-info {
@@ -318,21 +327,21 @@
 .product-title {
   font-family: var(--font-display);
   font-weight: 400;
+  
   font-size: clamp(32px, 4vw, 52px);
   letter-spacing: 0.04em;
   line-height: 1.4;
   margin-bottom: var(--space-3);
-  color: var(--color-navy);
 }
 
 .product-price {
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 400;
-  color: var(--color-navy);
+  color: var(--text-primary);
   margin-bottom: var(--space-5);
   padding-bottom: var(--space-4);
-  border-bottom: 0.5px solid var(--border-line);
+  border-bottom: 1px solid var(--border-line);
   display: flex;
   align-items: center;
   gap: var(--space-3);
@@ -358,293 +367,186 @@
 /* Specs — 規格列表 */
 .product-specs {
   list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-5);
+  padding: 0; margin: 0 0 var(--space-5);
+  border-top: 1px solid var(--border-line);
 }
 
 .product-specs li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 0.5px solid var(--border-line);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-line);
   font-family: var(--font-sans);
   font-size: 13px;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
 }
 
-.product-specs li span:first-child {
-  color: var(--text-secondary);
-  letter-spacing: 0.08em;
-}
-
-.product-specs li span:last-child {
-  color: var(--color-navy);
+.product-specs li::before {
+  content: attr(data-label);
+  font-family: var(--font-sans);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
   font-weight: 500;
 }
 
-/* Size / Variant Selector */
-.product-variants {
-  margin-bottom: var(--space-5);
+/* 數量選擇 */
+.quantity-selector {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: var(--space-4);
+  border: 1px solid var(--border-line);
 }
 
-.variant-label {
-  font-family: var(--font-sans);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  display: block;
-  margin-bottom: var(--space-3);
-}
-
-.variant-options {
-  display: flex;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-}
-
-.variant-btn {
-  padding: 8px 16px;
-  background: transparent;
-  border: 0.5px solid var(--border-line);
-  font-family: var(--font-sans);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
+.qty-btn {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  transition: color 0.2s, background 0.2s;
 }
 
-.variant-btn:hover {
-  border-color: var(--color-blue);
-  color: var(--color-navy);
+.qty-btn:hover { color: var(--text-primary); background: var(--color-linen); }
+
+.qty-number {
+  width: 64px;
+  text-align: center;
+  font-family: var(--font-display);
+  
+  font-weight: 300;
+  font-size: 20px;
+  border-left: 1px solid var(--border-line);
+  border-right: 1px solid var(--border-line);
+  line-height: 48px;
 }
 
-.variant-btn.active {
-  border-color: var(--color-blue);
-  background: var(--color-blue);
-  color: var(--color-white);
-}
-
-.variant-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-
-/* Add to Cart */
-.product-actions {
-  display: flex;
-  gap: var(--space-3);
-  margin-bottom: var(--space-5);
-}
-
-.btn-add-cart {
-  flex: 1;
-  padding: 16px var(--space-5);
-  background: var(--color-navy);
-  border: 1px solid var(--color-navy);
-  color: var(--color-white);
+.add-to-cart-btn {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  background: var(--color-obsidian);
+  color: var(--color-ivory);
+  border: 1px solid var(--color-obsidian);
+  border-radius: var(--radius);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.25s, border-color 0.25s;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-add-cart:hover {
-  background: var(--color-blue);
-  border-color: var(--color-blue);
+.add-to-cart-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: -100%; right: 100%; height: 2px;
+  background: var(--color-gold);
+  transition: left 0.35s ease, right 0.35s ease;
 }
 
-.btn-wishlist {
-  width: 52px;
-  height: 52px;
-  background: transparent;
-  border: 0.5px solid var(--border-line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
-  color: var(--text-secondary);
-  font-size: 18px;
-  flex-shrink: 0;
-}
+.add-to-cart-btn:hover { background: var(--color-graphite); border-color: var(--color-graphite); }
+.add-to-cart-btn:hover::after { left: 0; right: 0; }
 
-.btn-wishlist:hover {
-  border-color: var(--color-blue);
-  color: var(--color-blue);
-}
-
-.btn-wishlist.active {
-  border-color: var(--color-blue);
-  color: var(--color-blue);
-}
-
-/* Product Note */
-.product-note {
-  font-family: var(--font-sans);
-  font-size: 12px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  letter-spacing: 0.04em;
-  padding-top: var(--space-4);
-  border-top: 0.5px solid var(--border-line);
-}
-
-/* =========================================
-   Recommend Section
-   ========================================= */
+/* ── Recommend ── */
 .recommend-section {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--space-7) var(--space-5) 0;
 }
 
-.recommend-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: var(--space-5);
-  padding-bottom: var(--space-4);
-  border-bottom: 0.5px solid var(--border-line);
-}
-
-.recommend-header h2 {
+.recommend-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: 28px;
+  
+  font-size: 32px;
   letter-spacing: 0.04em;
-  color: var(--color-navy);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-line);
+  padding-bottom: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.recommend-header p {
+.recommend-title::after {
+  content: "You May Also Like";
   font-family: var(--font-sans);
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-blue);
-  margin: 0 0 6px;
+  color: var(--color-gold);
+  font-style: normal;
 }
 
 .recommend-carousel {
   position: relative;
-  padding: 0 56px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
-/* 對應 HTML 的 .recommend-slider */
-.recommend-slider,
-.recommend-carousel-inner {
-  overflow: hidden;
-}
+.recommend-slider { flex: 1; overflow: hidden; }
 
 .recommend-track {
   display: flex;
-  gap: 16px;
+  gap: var(--space-3);
   transition: transform 0.4s ease;
 }
 
-.recommend-track .list-product-card {
-  flex: 0 0 calc((100% - 32px) / 3);
-  display: grid !important;
+/* 推薦區卡片 — 直式（較窄空間） */
+.recommend-track .product-card {
+  flex: 0 0 calc((100% - var(--space-3) * 2) / 3);
+  min-width: 0;
   grid-template-columns: 1fr;
-  grid-template-rows: 220px auto;
-  border: 0.5px solid var(--border-line);
-  overflow: hidden;
-  background: var(--color-white);
+  background: var(--color-ivory);
+  border: 1px solid var(--border-line);
 }
 
-.recommend-track .list-product-image {
-  width: 100%;
-  height: 220px;
-  aspect-ratio: auto;
-  overflow: hidden;
-  background: var(--color-frost);
-}
+.recommend-track .product-card::before { display: none; }
 
-.recommend-track .list-product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.recommend-track .list-product-body {
-  padding: 18px 20px;
-  border-top: 0.5px solid var(--border-line);
+.recommend-track .product-card .card-img-wrapper { aspect-ratio: 4/3; }
+.recommend-track .product-card .card-body {
+  padding: var(--space-4);
   border-left: none;
+  border-top: 1px solid var(--border-line);
 }
 
-.recommend-track .list-product-body h3 {
-  font-size: 20px;
-  line-height: 1.35;
-  margin-bottom: 8px;
-  color: var(--color-navy);
-}
-
-.recommend-track .list-product-body > p {
-  font-size: 12px;
-  line-height: 1.6;
-  margin-bottom: 12px;
-  opacity: 0.72;
-}
-
-.recommend-track .list-product-price {
-  font-size: 16px;
-  color: var(--color-navy);
-}
-
-.recommend-track .list-product-link {
-  font-size: 9px;
-}
-
-/* 輪播按鈕：絕對定位在左右兩側 */
-.carousel-controls {
-  display: contents; /* 不產生額外容器，讓兩個 btn 各自定位 */
+.recommend-track .product-card h3 {
+  font-size: 18px;
+  margin-bottom: var(--space-2);
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: var(--color-white);
-  border: 0.5px solid var(--border-blue);
+  width: 44px; height: 44px;
+  background: transparent;
+  border: 1px solid var(--border-gold);
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   transition: border-color 0.2s, background 0.2s, color 0.2s;
   flex-shrink: 0;
-  color: var(--color-blue);
-  z-index: 2;
-  box-shadow: 0 2px 12px rgba(30, 47, 61, 0.08);
+  color: var(--color-gold);
 }
-
-.carousel-btn:first-child { left: 0; }
-.carousel-btn:last-child  { right: 0; }
 
 .carousel-btn:hover {
-  border-color: var(--color-blue);
-  background: var(--color-blue);
-  color: var(--color-white);
-}
-
-.carousel-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-  pointer-events: none;
+  border-color: var(--color-gold);
+  background: var(--color-gold);
+  color: var(--color-obsidian);
 }
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
+  /* 橫式卡片縮圖欄 */
   .list-product-card { grid-template-columns: 220px 1fr; }
+
   .product-wrapper { grid-template-columns: 1fr; gap: var(--space-5); }
 
   .product-list-hero, .recommend-section, .main-content {
@@ -655,31 +557,34 @@
   .product-list-section { padding: var(--space-5) var(--space-4) 0; }
   .product-list-toolbar { padding: 0 var(--space-4); }
 
-  .recommend-track .list-product-card {
-    flex: 0 0 calc((100% - 16px) / 2);
+  .recommend-track .product-card {
+    flex: 0 0 calc((100% - var(--space-3)) / 2);
   }
 }
 
 @media (max-width: 640px) {
-  .recommend-track .list-product-card { flex: 0 0 72%; grid-template-rows: 150px auto; }
-  .recommend-track .list-product-image { height: 150px; }
-  .recommend-track .list-product-body { padding: 12px; }
-  .recommend-track .list-product-body h3 { font-size: 16px; }
-  .recommend-track .list-product-body > p { font-size: 11px; }
-  .recommend-track .list-product-price { font-size: 13px; }
-
+  .recommend-track .product-card { flex: 0 0 100%; }
   .product-list-toolbar { flex-direction: column; }
   .product-list-categories { flex-wrap: wrap; }
   .product-list-meta { padding: var(--space-3) 0; }
-  .product-actions { flex-direction: column; }
-  .btn-wishlist { width: 100%; height: 44px; }
 }
 
 /* =========================================
-   Product List Grid 最終整合
+   Product List Layout Final
+   商品列表最終整理版
+   - 桌機：兩欄商品卡
+   - 手機：兩欄商品卡
+   - 圖片框固定，不受圖片原始比例影響
+   - 壓過 JS filterProducts 寫入的 inline display:flex
    ========================================= */
 
-/* 桌機：兩欄卡片 */
+/* 外層商品列表 */
+.product-list-grid {
+  background: transparent;
+  border: none;
+}
+
+/* 桌機 / 大平板：兩欄 */
 @media (min-width: 961px) {
   .product-list-grid {
     display: grid;
@@ -691,9 +596,9 @@
     display: grid !important;
     grid-template-columns: 1fr;
     grid-template-rows: 220px auto;
-    border: 0.5px solid var(--border-line);
+    border: 1px solid var(--border-line);
     overflow: hidden;
-    background: var(--color-white);
+    background: var(--color-ivory);
   }
 
   .product-list-grid .list-product-card .list-product-image {
@@ -701,7 +606,7 @@
     height: 220px;
     aspect-ratio: auto;
     overflow: hidden;
-    background: var(--color-frost);
+    background: var(--color-linen);
   }
 
   .product-list-grid .list-product-card .list-product-image img {
@@ -714,7 +619,7 @@
 
   .product-list-grid .list-product-card .list-product-body {
     border-left: none;
-    border-top: 0.5px solid var(--border-line);
+    border-top: 1px solid var(--border-line);
     padding: 18px 20px;
     min-width: 0;
   }
@@ -726,7 +631,6 @@
   letter-spacing: 0.02em;
   line-height: 1.35;
   margin-bottom: 8px;
-  color: var(--color-navy);
 }
 
 .product-list-grid .list-product-card .list-product-body > p {
@@ -743,7 +647,7 @@
 .product-list-grid .list-product-card .list-product-price {
   font-size: 16px;
   letter-spacing: 0.04em;
-  color: var(--color-navy);
+  color: var(--color-graphite);
 }
 
 .product-list-grid .list-product-card .list-product-link {
@@ -752,7 +656,7 @@
   opacity: 0.72;
 }
 
-/* 平板：橫式 */
+/* 平板：維持橫式，避免過早變太擠 */
 @media (max-width: 960px) and (min-width: 641px) {
   .product-list-grid {
     display: flex;
@@ -763,7 +667,7 @@
   .product-list-grid .list-product-card {
     display: grid !important;
     grid-template-columns: 280px minmax(0, 1fr);
-    border: 0.5px solid var(--border-line);
+    border: 1px solid var(--border-line);
     overflow: hidden;
   }
 
@@ -782,13 +686,13 @@
   }
 
   .product-list-grid .list-product-card .list-product-body {
-    border-left: 0.5px solid var(--border-line);
+    border-left: 1px solid var(--border-line);
     border-top: none;
     padding: 18px 20px;
   }
 }
 
-/* 手機：兩欄 */
+/* 手機：一行兩個 */
 @media (max-width: 640px) {
   .product-list-section {
     padding: var(--space-4) var(--space-3) 0;
@@ -798,15 +702,17 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+    background: transparent;
+    border: none;
   }
 
   .product-list-grid .list-product-card {
     display: grid !important;
     grid-template-columns: 1fr;
     grid-template-rows: 130px auto;
-    border: 0.5px solid var(--border-line);
+    border: 1px solid var(--border-line);
     overflow: hidden;
-    background: var(--color-white);
+    background: var(--color-ivory);
   }
 
   .product-list-grid .list-product-card .list-product-image {
@@ -827,7 +733,7 @@
   .product-list-grid .list-product-card .list-product-body {
     padding: 12px;
     border-left: none;
-    border-top: 0.5px solid var(--border-line);
+    border-top: 1px solid var(--border-line);
   }
 
   .product-list-grid .list-product-card .list-product-tag {
@@ -868,84 +774,111 @@
   }
 }
 
-/* 隱藏用（JS 控制） */
+/* 分類隱藏用：一定要放最底 */
 .product-list-grid .list-product-card.is-hidden {
   display: none !important;
 }
+
 /* =========================================
-   Quantity Selector + Add to Cart
-   ========================================= */
+   Product Detail Recommend：套用商品頁卡片格式
+========================================= */
 
-.quantity-selector {
+.recommend-track {
   display: flex;
-  align-items: center;
-  gap: 0;
-  border: 0.5px solid var(--border-line);
-  width: fit-content;
-  margin-bottom: 12px;
+  gap: 16px;
+  transition: transform 0.4s ease;
 }
 
-.qty-btn {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  font-size: 18px;
-  font-weight: 300;
-  color: var(--color-navy);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.15s, color 0.15s;
-  -webkit-tap-highlight-color: transparent;
+.recommend-track .list-product-card {
+  flex: 0 0 calc((100% - 32px) / 3);
+  display: grid !important;
+  grid-template-columns: 1fr;
+  grid-template-rows: 220px auto;
+  border: 1px solid var(--border-line);
+  overflow: hidden;
+  background: var(--color-ivory);
 }
 
-.qty-btn:hover {
-  background: var(--color-frost);
-  color: var(--color-blue-dark);
-}
-
-.qty-btn:active {
-  background: var(--color-blue-pale);
-}
-
-.qty-number {
-  min-width: 44px;
-  text-align: center;
-  font-family: var(--font-display);
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-navy);
-  border-left: 0.5px solid var(--border-line);
-  border-right: 0.5px solid var(--border-line);
-  line-height: 40px;
-  display: inline-block;
-  user-select: none;
-}
-
-/* 加入購物車 */
-.add-to-cart-btn {
+.recommend-track .list-product-image {
   width: 100%;
-  padding: 14px var(--space-5);
-  background: var(--color-navy);
-  border: 1px solid var(--color-navy);
-  color: var(--color-white);
-  font-family: var(--font-sans);
+  height: 220px;
+  aspect-ratio: auto;
+  overflow: hidden;
+  background: var(--color-linen);
+}
+
+.recommend-track .list-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.recommend-track .list-product-body {
+  padding: 18px 20px;
+  border-top: 1px solid var(--border-line);
+}
+
+.recommend-track .list-product-body h3 {
+  font-size: 20px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.recommend-track .list-product-body > p {
   font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.25s, border-color 0.25s;
-  margin-top: 4px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  opacity: 0.72;
 }
 
-.add-to-cart-btn:hover {
-  background: var(--color-blue);
-  border-color: var(--color-blue);
+.recommend-track .list-product-price {
+  font-size: 16px;
 }
 
-.add-to-cart-btn:active {
-  opacity: 0.85;
+.recommend-track .list-product-link {
+  font-size: 9px;
 }
+
+/* 平板：兩張 */
+@media (max-width: 960px) {
+  .recommend-track .list-product-card {
+    flex: 0 0 calc((100% - 16px) / 2);
+  }
+}
+
+/* 手機推薦區：1.5 張滑動，保留高級感 */
+@media (max-width: 640px) {
+  .recommend-track {
+    gap: 12px;
+  }
+
+  .recommend-track .list-product-card {
+    flex: 0 0 72%;
+    grid-template-rows: 150px auto;
+  }
+
+  .recommend-track .list-product-image {
+    height: 150px;
+  }
+
+  .recommend-track .list-product-body {
+    padding: 12px;
+  }
+
+  .recommend-track .list-product-body h3 {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .recommend-track .list-product-body > p {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .recommend-track .list-product-price {
+    font-size: 13px;
+  }
+}
+

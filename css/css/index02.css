@@ -3,33 +3,110 @@
    Vol.02 / Soft Blue · White · Split Hero
    ========================================= */
 
-/* ── Hero：左文右圖延伸式 Hero / 右側漸層模糊 ── */
+/* ── Hero：高級背景式 Hero / 左側文字 + 中間聚焦 + 右側自然消失 ── */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 90vh;
   overflow: hidden;
-  background: linear-gradient(90deg, #f7fbfd 0%, #eef5f8 48%, #e4eef3 100%);
   border-bottom: 0.5px solid var(--border-line);
-}
-
-/* Hero 內容容器：左側文字固定在前景 */
-.hero-container {
-  max-width: var(--container-max);
-  min-height: 88vh;
-  margin: 0 auto;
-  padding: var(--space-7) var(--space-5);
-  position: relative;
-  z-index: 3;
+  background: #eef3f5;
   display: flex;
   align-items: center;
 }
 
-/* 左側文字 */
-.hero-content {
-  width: 42%;
-  max-width: 520px;
+/* 背景圖層：直接吃 HTML 裡的 .hero-image img，不改 HTML */
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--color-frost);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.95;
+  transform: scale(1.04);
+  filter: brightness(0.92) contrast(1.03) saturate(0.92);
+}
+
+/* 中央柔焦層：讓畫面不刺、圖片更有雜誌感 */
+.hero-image::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  z-index: 1;
+  pointer-events: none;
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0,0,0,0.3) 40%,
+    rgba(0,0,0,0.65) 65%,
+    rgba(0,0,0,0.9) 100%
+  );
+}
+
+/* 遮罩：左側保文字、中間保圖片、右邊自然淡掉 */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(246, 249, 250, 0.96) 0%,
+      rgba(246, 249, 250, 0.86) 26%,
+      rgba(246, 249, 250, 0.46) 48%,
+      rgba(246, 249, 250, 0.16) 68%,
+      rgba(246, 249, 250, 0.74) 100%
+    );
+}
+
+/* 細緻冷灰霧面層：把整體拉回乾淨高級感 */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 58% 45%,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(255, 255, 255, 0.05) 28%,
+      rgba(227, 235, 239, 0.22) 64%,
+      rgba(227, 235, 239, 0.46) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.02) 42%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+}
+
+/* Hero 內容層 */
+.hero-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-5);
   position: relative;
-  z-index: 4;
+  z-index: 3;
+  display: block;
+}
+
+.hero-content {
+  max-width: 520px;
 }
 
 .hero-content .kicker {
@@ -52,11 +129,12 @@
 .hero-content h1 {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(42px, 5.2vw, 78px);
-  line-height: 1.26;
+  font-size: clamp(42px, 5.6vw, 86px);
+  line-height: 1.25;
   letter-spacing: 0.035em;
   margin-bottom: var(--space-4);
   color: var(--color-navy);
+  text-shadow: 0 1px 18px rgba(255,255,255,0.32);
 }
 
 .hero-content h1 em,
@@ -82,50 +160,6 @@
   margin-bottom: var(--space-6);
 }
 
-/* Hero 主要 CTA：藍底白字 */
-.btn-accent {
-  display: inline-block;
-  padding: 13px 32px;
-  background: var(--color-blue);
-  border: 1px solid var(--color-blue);
-  color: var(--color-white);
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background 0.25s, border-color 0.25s;
-  white-space: nowrap;
-}
-
-.btn-accent:hover {
-  background: var(--color-blue-dark);
-  border-color: var(--color-blue-dark);
-}
-
-/* Hero 次要 CTA：透明框，深色字 */
-.hero-cta-row .btn-outline {
-  display: inline-block;
-  padding: 13px 32px;
-  background: transparent;
-  border: 1px solid rgba(30, 47, 61, 0.28);
-  color: var(--color-navy);
-  font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: border-color 0.25s, background 0.25s, color 0.25s;
-  white-space: nowrap;
-}
-
-.hero-cta-row .btn-outline:hover {
-  border-color: var(--color-navy);
-  background: rgba(30, 47, 61, 0.05);
-}
-
 .hero-cta-text {
   font-family: var(--font-display);
   font-style: italic;
@@ -141,6 +175,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
   padding-top: var(--space-5);
+  margin-bottom: var(--space-6);
   border-top: 0.5px solid rgba(74, 139, 181, 0.22);
   max-width: 520px;
 }
@@ -180,117 +215,45 @@
   display: block;
 }
 
-/* 右側圖片：不是滿版背景，而是從中右側延伸出去 */
-.hero-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 38%;
-  z-index: 1;
-  overflow: hidden;
-  background: var(--color-frost);
+/* Hero 內圖片裝飾框全部關閉，避免跟背景式 Hero 打架 */
+.hero-image::after,
+.hero-image-label {
+  display: none;
 }
 
-/* 圖片本體：放大、靠右，營造延伸感 */
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center right;
-  transform: scale(1.04);
-  filter: brightness(0.96) contrast(1.02) saturate(0.88);
-}
-
-/* 左側淡出：讓圖片接到文字區時自然消失 */
-.hero-image::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #f7fbfd 0%,
-    rgba(247, 251, 253, 0.92) 12%,
-    rgba(247, 251, 253, 0.62) 26%,
-    rgba(247, 251, 253, 0.18) 44%,
-    rgba(247, 251, 253, 0) 62%
-  );
-}
-
-/* 右側虛化：圖片越往右越柔、越淡 */
-.hero-image::after {
-  content: "";
-  position: absolute;
-  top: -24px;
-  right: -24px;
-  bottom: -24px;
-  width: 42%;
-  z-index: 3;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(238, 245, 248, 0) 0%,
-    rgba(238, 245, 248, 0.28) 35%,
-    rgba(238, 245, 248, 0.72) 72%,
-    rgba(238, 245, 248, 0.96) 100%
-  );
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-/* 細緻霧面層：降低圖片銳利感 */
-.hero-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255,255,255,0.16) 0%,
-      rgba(255,255,255,0.04) 45%,
-      rgba(255,255,255,0.24) 100%
-    );
-}
-
-/* 手機 / 平板 */
+/* Hero RWD */
 @media (max-width: 960px) {
   .hero-section {
     min-height: 78vh;
   }
 
   .hero-container {
-    min-height: 78vh;
     padding: var(--space-6) var(--space-4);
   }
 
   .hero-content {
-    width: 68%;
     max-width: 500px;
   }
 
-  .hero-image {
-    left: 26%;
-  }
-
   .hero-image img {
-    object-position: center right;
-    transform: scale(1.06);
-    filter: brightness(0.94) contrast(1.02) saturate(0.86);
+    object-position: center;
+    transform: scale(1.05);
+    filter: brightness(0.88) contrast(1.02) saturate(0.9);
   }
 
-  .hero-image::before {
-    background: linear-gradient(
-      90deg,
-      #f7fbfd 0%,
-      rgba(247, 251, 253, 0.9) 20%,
-      rgba(247, 251, 253, 0.52) 42%,
-      rgba(247, 251, 253, 0.12) 68%,
-      rgba(247, 251, 253, 0) 100%
-    );
+  .hero-section::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(246, 249, 250, 0.96) 0%,
+        rgba(246, 249, 250, 0.84) 42%,
+        rgba(246, 249, 250, 0.58) 72%,
+        rgba(246, 249, 250, 0.72) 100%
+      );
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 8vw, 68px);
   }
 }
 
@@ -300,12 +263,7 @@
   }
 
   .hero-container {
-    min-height: 76vh;
     padding: var(--space-6) var(--space-3);
-  }
-
-  .hero-content {
-    width: 82%;
   }
 
   .hero-content h1 {
@@ -318,19 +276,9 @@
     max-width: 320px;
   }
 
-  .hero-image {
-    left: 18%;
-    opacity: 0.78;
-  }
-
-  .hero-image::after {
-    width: 36%;
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-  }
-
   .hero-meta {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0;
   }
 
   .hero-meta-item {
@@ -355,6 +303,7 @@
     flex-wrap: wrap;
   }
 }
+
 
 /* ── Manifesto ── */
 .manifesto {
