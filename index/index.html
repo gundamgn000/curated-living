@@ -104,7 +104,9 @@
       </div>
 
       <div class="hero-image">
-        <img src="https://i0.wp.com/tj2lighting.com/wp-content/uploads/2024/04/20260305_1756_Image-Generation_remix_01kjypt2s5eedrys0swk66e7hy.jpg?ssl=1" alt="生活選品情境">
+        <img src="https://i0.wp.com/tj2lighting.com/wp-content/uploads/2024/04/20260305_1756_Image-Generation_remix_01kjypt2s5eedrys0swk66e7hy.jpg?ssl=1" class="hero-slide active">
+        <img src="https://www.twucm.com/uploads/products/664af65b833f7.jpg" class="hero-slide">
+        <img src="https://mook-aws.hmgcdn.com/public/article/a1/16600/A16600_1509440388_1.jpg" class="hero-slide">
       </div>
     </div>
   </section>
@@ -265,6 +267,17 @@
     const mobileDrawer = document.getElementById('mobileDrawer');
     const drawerDropdownToggle = document.getElementById('drawerDropdownToggle');
     const drawerSubmenu = document.getElementById('drawerSubmenu');
+
+    const slides = document.querySelectorAll('.hero-slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.add('active');
+    }, 4000);
 
     // ✅ 漢堡選單（一定要有才綁）
     if (menuToggle && mobileDrawer) {
